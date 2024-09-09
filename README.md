@@ -1,0 +1,2 @@
+# solo-project
+pizza app
