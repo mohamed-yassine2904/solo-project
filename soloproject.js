@@ -6,7 +6,7 @@ function generateID() {
   }
   var id = generateID();
   $("#title").css({ "background-color": "gold", "text-align": "center" });
-  
+  // to create a product we use the function under
   function makeSomething(price, name, category, images) {
     return {
       id: id(),
@@ -18,7 +18,7 @@ function generateID() {
     };
   }
 
-  
+  // to keep going back and forth between the images after triggering the button we use the function under
   var counter = 0;
   function toggleImage() {
     counter = (counter + 1) % item1.images.length;
@@ -29,12 +29,7 @@ function generateID() {
   $("#image").on("click", function () {
     toggleImage();
   });
-  
-  //OR
-  
-  // $("#image").on("click", toggleImage);
-  
-  //oop
+  // i wrote those high order below function to help through my methods later
   function each(array, func) {
     for (let i = 0; i < array.length; i++) {
       func(array[i], i);
@@ -57,59 +52,33 @@ function generateID() {
     });
     return acc;
   }
-  
+// that a function to add products to our list
   function Makeshop(name) {
     const addSomething = function (name, price, category, images) {
       this.list.push(makeSomething(price, name, category, images));
     };
-    const remove = function (id) {
-      this.list = filter(this.list, function (element) {
-        return element.id !== id;
-      });
-    };
-    const update = function (id, key, val) {
-      var searched = filter(this.list, function (element, i) {
-        return element.id === id;
-      });
-      searched[0][key] = val;
-      console.log(this.list);
-    };
-    // const displayByCat = function (category) {
-    //   var filtred = filter(this.list, function (element, i) {
-    //     return element.category === category;
-    //   });
-    //   each(filtred, function (element) {
-    //     console.log(element.name + " " + element.price + " " + element.category);
-    //   });
-    // };
+    // displaybycat is to loop through the list and prints out only the elment where the predicate is correct
     const displayByCat = function (category) {
       return filter(this.list, function (element, i) {
         return element.category === category;
       });
     };
+    // to display the list's product from the cheapest to the most expensive
     const sortByPrice = function () {
       return this.list.sort(function (a, b) {
         return a.price - b.price;
       });
     };
-    const sortBydate = function () {
-      return this.list.sort(function (a, b) {
-        return a.date - b.date;
-      });
-    };
-  
     var obj = {};
     obj.name = name;
     obj.list = [];
     obj.addSomething = addSomething;
-    obj.remove = remove;
-    obj.update = update;
     obj.displayByCat = displayByCat;
     obj.sortByPrice = sortByPrice;
-    obj.sortBydate = sortBydate;
     return obj;
   }
   
+  // so we created an instance called shop1
   var shop1 = Makeshop("shop1");
   shop1.addSomething("Pizza", 10, "peperoni", [
     "https://dxpulwm6xta2f.cloudfront.net/eyJidWNrZXQiOiJhZGMtZGV2LWltYWdlcy1yZWNpcGVzIiwia2V5IjoicGl6emFfcGVwcGVyb25pLmpwZyIsImVkaXRzIjp7ImpwZWciOnsicXVhbGl0eSI6ODB9LCJwbmciOnsicXVhbGl0eSI6ODB9LCJ3ZWJwIjp7InF1YWxpdHkiOjgwfX19",
@@ -118,6 +87,8 @@ function generateID() {
   ]);
   
   $("#shop").css({'display': 'flex', "align-items": "center","margin-left": "32%",'gap': "20%",'color':'gold'});
+  
+  // after giving this function an arguement the function will display all the info about it
   function displayOne(item) {
     console.log(item.images[0]);
   
@@ -142,6 +113,7 @@ function generateID() {
     console.log("index/counter== > ", counter);
     $(`#image-${item.id}`).attr("src", item.images[counter]);
   }
+  // we used each in this function sort of loop to iterate throught the list so it displays each item on the list
   function displayAll(array) {
     each(array, function (element, i) {
       console.log(element);
@@ -150,6 +122,7 @@ function generateID() {
   }
   displayAll(shop1.list);
   
+  // this function is to display the list after sorting the items depending on the price
   $("body").append("<button id='Sort' >Sort by price</button>");
   function displaySortedItems() {
     var arr = shop1.sortByPrice();
@@ -160,6 +133,7 @@ function generateID() {
     displaySortedItems();
   });
   
+  // basically it will display each element having the category
   $("body").append("<input id='input' placeholder='insert category'>");
   $("body").append("<button id='search' >search</button>");
   function search() {
@@ -171,8 +145,8 @@ function generateID() {
     search();
   });
   
-  //Advanced
-  $("body").append("<button id='manager' >Manager interface </button>");
+  
+  // $("body").append("<button id='manager' >Manager interface </button>");
   
   $("body").append(`<div id='manager-div'>
   <input id='name' placeholder='name'>
@@ -201,11 +175,8 @@ console.log(shop1.list);
     $("#shop").empty();
     displayAll(shop1.list);
     });
-  $("#manager").on("click", function () {
-    $("#manager-div").toggle();
-  });
-  var bt = document.getElementById("sub");
-  console.log(bt);
+  
+
   
 
 
