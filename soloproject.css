@@ -1,0 +1,117 @@
+body{
+    background-color:  black;
+    
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top,rgba(0.5,0.5,0.5,0.5),rgba(0.5,0.5,0.5,0.5));
+    background-position: center;
+    background-size: cover;
+
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width:200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    float: left;
+}
+.menu{
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+ul{
+    float:left;
+    display: flex;
+    align-items: center;
+}
+ul li{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+}
+ul li a:hover{
+    color:gold;
+}
+.background-div {
+    width: 1550px;  
+    height: 600px; 
+    background-image: url(./img/3.jpg);
+    background-size: cover; /* Adjust to make the image cover the div */
+    background-position: center; /* Position the image in the center */
+  }
+  .better{
+    margin: 0px 0px 0px 10px;
+    height: 250px;
+    background-color: white;
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    box-shadow: 8px 8px black;
+    
+}
+.categ{
+        display: inline-grid;
+        grid-template-columns: auto auto auto auto;
+        background-color:black;
+        padding: 10px;
+      }
+#intro{
+    color:black;
+    font-size: 18px;
+    font-weight: bold;
+}
+fieldset{
+    background-color: cornsilk;
+    width: 48.7%;
+    margin-left: 50px;
+    
+}
+fieldset p{
+    float: right;
+}
+#pizzas{
+    background-image: url(./img/5.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+fieldset h1{
+    float: right;
+    margin-right: 200px;
+}
+strong{
+    float: left;
+}
+#salades{
+    background-image: url(./img/6.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#boissons{
+    background-image: url(./img/7.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

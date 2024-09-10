@@ -1,0 +1,73 @@
+body{
+    background-color:black;
+
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width:200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    float: left;
+}
+.menu{
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+ul{
+    float:left;
+    display: flex;
+    align-items: center;
+}
+ul li{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+}
+ul li a:hover{
+    color:gold;
+}
+
+.profinfo{
+    width: 800px;
+
+}
+p{
+    color: white;
+}
+legend{
+    color: white;
+}
+#divFil{
+    display: flex;
+}
+.enregistrement{
+    text-align: center;
+    margin-top: 40px;
+}
+.enregistrement #sub:hover{
+    color:gold
+
+}
+.enregistrement #res:hover{
+    color:gold
+
+}
+#divFil label{
+    color:white
+}

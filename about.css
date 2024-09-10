@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top,rgba(0.5,0.5,0.5,0.5),rgba(0.5,0.5,0.5,0.5));
+    background-position: center;
+    background-size: cover;
+
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width:200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    float: left;
+}
+.menu{
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+ul{
+    float:left;
+    display: flex;
+    align-items: center;
+}
+ul li{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+}
+ul li a:hover{
+    color:gold;
+}
+#introd{
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+}
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color:black;
+    padding: 10px;
+  }
+  ul li{
+    font-size: 18px;
+    font-weight: bold;
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contact.css">
+    <title>CONTACT</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Papa John's</h2>
+            </div>
+            <div class="menu ">
+               <ul>
+                <li><a href="soloproject.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Quiz.html">Create</a></li>
+                <li><a href="#">CONTACT</a></li>
+            
+               </ul> 
+            </div>
+        </div>
+    </div>
+    <div id="inscri" class="titre">inscription</div>
+    <div id="divFil">
+    <fieldset class="perinfo">
+        <legend>Personal info</legend>
+
+        <label for="name">lastName</label>
+        <input id="lastName" type="text" name="name" placeholder="Your lastName" size="75"><br>
+
+
+        <label for="name">first name</label>
+        <input id="firstName" type="text" name="name" placeholder="Your firstName" size="75"><br>
+
+
+        <label for="dn">Birthday</label>
+        <input id="dn" type="Date" name="dn" ><br>
+
+
+        <label for="Sexe">sexe</label>
+        <select id="Sexe" type="text" name="sexe" >
+            <option value="h">Homme</option>
+            <option value="F">Femme</option>
+        </select><br>
+
+
+    <label for="Marital statue">Marital statue</label>
+    <input id="maried" type="radio" name="ec" value="maried" >
+    <label id="l1" for="maried">Maried</label>
+    <input id="celibataire" type="radio" name="ec" value="maried" >
+    <label id="l1" for="celibataire">celibataire</label>
+
+
+    </fieldset>
+    <fieldset class="profinfo">
+        <legend>professional onfo</legend>
+
+            <label for="mail">Email</label>
+            <input id="email" type="email" name="email" placeholder="user@exemple.com" >
+      
+  
+    <label id="contract" for="contract">
+            I read and accept the rules</label>
+            <input id="check_contract" type="checkbox" name="contract">
+     
+
+    </fieldset>
+</div>
+    <fieldset class="suggestion">
+        <legend>opinion</legend>
+        
+            <textarea for="progress" name="progress" rows="5" cols="125"></textarea>
+    
+        
+    </fieldset>
+    <div class="enregistrement">
+      <button type="button" id="sub">sign in </button>
+        <input id="res" type="reset" name="annule"value="annuler">
+        
+    </div>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./contact.js"></script>
+</body>
+</html>

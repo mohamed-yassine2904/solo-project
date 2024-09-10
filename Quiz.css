@@ -1,0 +1,79 @@
+
+body{
+    background:black;
+    
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width:200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    float: left;
+}
+.menu{
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+ul{
+    float:left;
+    display: flex;
+    align-items: center;
+}
+ul li{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+}
+ul li a:hover{
+    color:gold;
+}
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: gold;
+    padding: 10px;
+    margin-left: 350px;
+    margin-top: 100px;
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid gray;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  .grid-item:hover{
+    color: greenyellow;
+  }
+#purchase{
+    background:  #001e4d;
+    color: #fff;
+    font-weight:500 ;
+    width: 150px;
+    
+    padding: 10px;
+    margin:20 px auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#but{
+    margin-left: 600px;
+}
